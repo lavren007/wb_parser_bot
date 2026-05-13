@@ -1,0 +1,10 @@
+services:
+  wb-parser-bot:
+    build: .
+    container_name: wb-parser-bot
+    restart: unless-stopped
+    volumes:
+      - ./temp:/app/temp
+      - ./.env:/app/.env
+    environment:
+      - TZ=Europe/Moscow
